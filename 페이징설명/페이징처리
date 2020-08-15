@@ -8,7 +8,7 @@ SELECT * FROM (
     ) A WHERE ROWNUM <= {범위까지}
 ) WHERE RNUM > {범위부터};
   
-OR
+OR 
   
 SELECT * FROM (
      SELECT /*+ INDEX_ASC or INDEX_DESC(A {정렬조건 인덱스명}) */
