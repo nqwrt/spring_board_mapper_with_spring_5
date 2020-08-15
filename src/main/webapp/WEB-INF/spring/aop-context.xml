@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	<context:component-scan base-package="edu.bit.board.aop"></context:component-scan>	
+		
+	<!-- <bean id="logAop" class="edu.bit.board.aop.LogAop" />
+	<bean id="logAdvice" class="edu.bit.board.aop.LogAdvice" />
+	
+
+	AOP설정	
+	<aop:config>
+		<aop:aspect ref="logAdvice">
+			<aop:pointcut id="publicM" expression="within(edu.bit.board.*)"/>
+			<aop:around pointcut-ref="publicM" method="loggerAop" />
+			<aop:before pointcut-ref="publicM" method="printLogging" />
+		</aop:aspect>
+	</aop:config>
+	
+	<aop:config>
+		aspect id는 logger이고, logAop를 참조함
+		<aop:aspect  ref="logAop">
+		    pointcut(핵심 기능)의 id는 publicM이고, edu.bit.ex.* 패키지에 있는 모든 클래스에 공통 기능을 적용
+			<aop:pointcut id="publicM" expression="within(edu.bit.board.*)"/>
+			loggerAop()라는 공통 기능을 publicM라는 pointcut에 적용
+			<aop:around pointcut-ref="publicM" method="loggerAop" /> 			
+		</aop:aspect>
+	</aop:config> -->
+			
+</beans>
